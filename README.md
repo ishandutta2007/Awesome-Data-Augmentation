@@ -1,11 +1,15 @@
 # Awesome-Data-Augmentation
-## Data Augmentation in AI: History, Progression, Variants, & Applications
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Data Augmentation Banner" width="100%">
+</p>
+
+## 🧠 Data Augmentation in AI: History, Progression, Variants, & Applications
 
 Data Augmentation is a hardware-aware data engineering and regularization paradigm designed to artificially expand the size, diversity, and structural variation of a training dataset without physically collecting new raw samples. By applying programmatic transformations—such as geometric warps, color space shifts, semantic pixel mixing, or generative text mutations—to existing data points, Data Augmentation artificially multiplies the available data matrix. This prevents deep neural networks from memorizing superficial training patterns (overfitting), instills crucial structural invariants (like translation and scale invariance), and smooths out the network's loss landscape to safeguard downstream model generalization.
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 1. 📅 The Macro Chronological Evolution
 
 The technical methodology of dataset expansion has transitioned from hand-crafted geometric transformations to automated policy-search routines and modern multi-modal generative synthesis loops.
 
@@ -25,7 +29,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Data-Modality Variants
+## 2. 🧩 Core Functional & Data-Modality Variants
 
 Data Augmentation strategies are strictly categorized based on the underlying data format and the mathematical complexity of the transformation engine.
 
@@ -36,7 +40,7 @@ Data Augmentation strategies are strictly categorized based on the underlying da
 
 ---
 
-## 3. Advanced Hardware-Accelerated Architecture Types
+## 3. ⚡ Advanced Hardware-Accelerated Architecture Types
 
 To scale data augmentation past processing throughput bottlenecks, modern engineering pipelines leverage specialized runtime execution layouts.
 
@@ -59,7 +63,7 @@ flowchart LR
 
 ---
 
-## 4. Production Engineering Challenges & Mitigations
+## 4. 🛠️ Production Engineering Challenges & Mitigations
 
 Deploying and scaling complex data augmentation workflows across large-scale distributed training clusters introduces critical semantic corruption risks.
 
@@ -70,7 +74,7 @@ Deploying and scaling complex data augmentation workflows across large-scale dis
 
 ---
 
-## 5. Frontier Real-World AI Industrial Applications
+## 5. 🚀 Frontier Real-World AI Industrial Applications
 
 | Industrial Application | Description | Year First Used | Seminal / First-Use Paper |
 | :--- | :--- | :--- | :--- |
@@ -80,7 +84,7 @@ Deploying and scaling complex data augmentation workflows across large-scale dis
 
 ---
 
-## References
+## 📚 References
 1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems (NeurIPS)*, 25, 1097-1105.
 2. Zhang, H., et al. (2017). mixup: Beyond empirical risk minimization. *arXiv preprint arXiv:1710.09412*.
 3. Cubuk, E. D., et al. (2018). Autoaugment: Learning augmentation strategies from data. *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 113-123.
