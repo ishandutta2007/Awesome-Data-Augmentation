@@ -11,7 +11,10 @@ The technical methodology of dataset expansion has transitioned from hand-crafte
 
 
 ```mermaid
-[Hand-Crafted Heuristics (Pre-2012)] ───> [Automated Policy Search (AutoAugment, 2018)] ───> [Generative Multimodal Data Loops (2024+)](Rigid Flips, Crops, & Blurs)              (Reinforcement-Learned Transformation Grids)       (Text-Guided Diffusion & LLM Synthetics)
+flowchart LR
+    A["Hand-Crafted Heuristics (Pre-2012)<br/>(Rigid Flips, Crops & Blurs)"]
+    --> B["Automated Policy Search (AutoAugment, 2018)<br/>(Reinforcement-Learned Transformation Policies)"]
+    --> C["Generative Multimodal Data Loops (2024+)<br/>(Text-Guided Diffusion & LLM-Generated Synthetic Data)"]
 ```
 
 *   **The Hand-Crafted Heuristic Era (Traditional Vision & ML, Pre-2012)**
@@ -50,7 +53,15 @@ To scale data augmentation past processing throughput bottlenecks, modern engine
     *   *The Fused Solution:* Modern architectures compile the data pipeline into parallelized CUDA/Triton blocks executed directly on the GPU. Raw data tensors are loaded into VRAM once, and transformations (like batched geometric warps or color shifts) execute concurrently across fast register arrays right before the forward pass math.
 
 ```mermaid
-GPU-Fused Acceleration Matrix[Raw Storage Shards] ───> [Load Data Tensors straight to VRAM] ───> [Parallel CUDA Transformations (DALI)]│▼[Backward Optimization Pass] <── [Loss Calculation] <── [Dense Forward Pass Layers inside GPU SRAM]
+flowchart LR
+    subgraph G["GPU-Fused Acceleration Pipeline"]
+        A["Raw Storage Shards"]
+        --> B["Load Data Tensors Directly to VRAM"]
+        --> C["Parallel CUDA Transformations (DALI)"]
+        --> D["Dense Forward Pass (GPU SRAM)"]
+        --> E["Loss Calculation"]
+        --> F["Backward Optimization Pass"]
+    end
 ```
 *   **Test-Time Augmentation (TTA)**
     *   *Profile:* Scaling compute at the inference gate. Instead of evaluating a single test image, the system generates $N$ augmented variations of that input (e.g., slightly cropped, rotated, and brightness-shifted versions) on-the-fly. The model runs a forward pass over all $N$ options, combining and averaging the output logit vectors to deliver a highly robust, stabilized final prediction.
