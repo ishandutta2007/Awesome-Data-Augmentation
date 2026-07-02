@@ -1,3 +1,8 @@
+
+<!--
+SEO Meta Description: A curated list of awesome data augmentation techniques, history, progression, variants, and applications in Artificial Intelligence, Computer Vision, and Natural Language Processing.
+Keywords: Data Augmentation, Deep Learning, Computer Vision, Natural Language Processing, Machine Learning, AutoAugment, Mixup, CutMix, Sim-to-Real, Kornia, NVIDIA DALI, Test-Time Augmentation
+-->
 # Awesome-Data-Augmentation
 <p align="center">
   <img src="./assets/banner.svg" alt="Awesome Data Augmentation Banner" width="100%">
