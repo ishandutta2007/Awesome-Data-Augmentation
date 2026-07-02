@@ -104,6 +104,17 @@ To advance this documentation repository, infrastructure workspace, or data-engi
 * Generate a **comprehensive Markdown table** explicitly comparing Hand-Crafted Heuristics, Mixup/CutMix, Automated Policy Search (AutoAugment), and Generative Diffusion/LLM Synthetics across time complexity boundaries, VRAM footprint parameters, computational training overhead, and risk of semantic label corruption.
 * Establish a **performance evaluation harness using NVIDIA DALI** to profile exactly how moving a multi-scale data augmentation pipeline from host CPU threads straight into fused GPU memory slots alters the overall wall-clock token-per-second training throughput of high-concurrency cloud nodes.
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Data-Augmentation&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Data-Augmentation&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Data-Augmentation&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Data-Augmentation&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
 ***
 
 **Proactive Repository Follow-Ups:**
