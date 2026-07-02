@@ -31,16 +31,16 @@ flowchart LR
 
 Data Augmentation strategies are strictly categorized based on the underlying data format and the mathematical complexity of the transformation engine.
 
-### A. Computer Vision (Pixel-Space Dynamics)
-*   **Geometric Transformations:** Modifies the spatial coordinate grid of an image. Includes random cropping, affine scaling, rotations, shearing, and elastic deformations to enforce location and orientation invariance.
-*   **Color Space & Pixel-Level Filtering:** Alters tensor channel values directly. Includes color jittering (modifying brightness, contrast, saturation, and hue), Gaussian blurring, and solarization to desensitize the model to variable lighting or camera sensors.
-*   **Aman-Feature Vector Mixing:**
-    1.  *Mixup:* Linearly interpolates two random images and their respective labels ($x = \lambda x_i + (1-\lambda)x_j$), creating hybrid training data.
-    2.  *CutMix:* Cuts out a physical patch from image A and pastes it over a region in image B, adjusting target labels proportionally to the covered pixel area.
+- ### A. Computer Vision (Pixel-Space Dynamics)
+	*   **Geometric Transformations:** Modifies the spatial coordinate grid of an image. Includes random cropping, affine scaling, rotations, shearing, and elastic deformations to enforce location and orientation invariance.
+	*   **Color Space & Pixel-Level Filtering:** Alters tensor channel values directly. Includes color jittering (modifying brightness, contrast, saturation, and hue), Gaussian blurring, and solarization to desensitize the model to variable lighting or camera sensors.
+	*   **Aman-Feature Vector Mixing:**
+	    1.  *Mixup:* Linearly interpolates two random images and their respective labels ($x = \lambda x_i + (1-\lambda)x_j$), creating hybrid training data.
+	    2.  *CutMix:* Cuts out a physical patch from image A and pastes it over a region in image B, adjusting target labels proportionally to the covered pixel area.
 
-### B. Natural Language Processing (Token-Space Dynamics)
-*   **Lexical Substitution (EDA / Back-Translation):** Replaces non-essential tokens using synonym lookups (WordNet) or semantic embeddings. Advanced pipelines run **Back-Translation**—translating an English phrase into French and back to English using a fast translation model to synthesize alternative grammatical structures.
-*   **Generative Self-Instruct Mutations:** Utilizes high-capacity frontier language models to take a baseline instruction prompt and rewrite it across multiple alternative modalities (e.g., adding technical constraints, simplifying terminology, or converting it into an edge-case reasoning debug task).
+- ### B. Natural Language Processing (Token-Space Dynamics)
+	*   **Lexical Substitution (EDA / Back-Translation):** Replaces non-essential tokens using synonym lookups (WordNet) or semantic embeddings. Advanced pipelines run **Back-Translation**—translating an English phrase into French and back to English using a fast translation model to synthesize alternative grammatical structures.
+	*   **Generative Self-Instruct Mutations:** Utilizes high-capacity frontier language models to take a baseline instruction prompt and rewrite it across multiple alternative modalities (e.g., adding technical constraints, simplifying terminology, or converting it into an edge-case reasoning debug task).
 
 ---
 
